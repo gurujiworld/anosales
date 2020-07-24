@@ -16,7 +16,7 @@ total=`vnstat -i bridge0 | grep "estimated" | head -n 1 | awk '{print $8}' | awk
 
     if [ "$tx" -ge "$m_tx" ]
     then
-        echo "The $HOSTNAME is used total Bandwidth RX:$tx GB on `date +%d-%h-%Y`" >> $LOGER
+        echo "The $HOSTNAME is used total Bandwidth TX:$tx GB on `date +%d-%h-%Y`" >> $LOGER
         echo "TOTAL :  The $HOSTNAME is used total Bandwidth RX:$tx GB on `date +%d-%h-%Y`" | mail -s "Transfered Bandwidth WARNING" $mailer
         
     fi
